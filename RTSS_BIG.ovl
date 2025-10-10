@@ -1,0 +1,571 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-9
+FontWeight=400
+ZoomRatio=3
+[Settings]
+Name=
+EnvVars=
+RefreshPeriod=500
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=38
+Tables=3
+Layers=20
+[Source0]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source1]
+Name=CPU usage max
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage max
+[Source2]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source3]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=CPU power
+[Source4]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source5]
+Name=RAM usage
+Units=MB
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage
+[Source6]
+Name=RAM usage \ process
+Units=MB
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage \ process
+[Source7]
+Name=GPU1 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 clock
+[Source8]
+Name=GPU1 memory clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory clock
+[Source9]
+Name=GPU1 voltage
+Units=mV
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 voltage
+[Source10]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source11]
+Name=GPU1 temperature 2
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature 2
+[Source12]
+Name=GPU1 fan speed
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 fan speed
+[Source13]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source14]
+Name=GPU1 memory controller usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory controller usage
+[Source15]
+Name=GPU1 video engine usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 video engine usage
+[Source16]
+Name=GPU1 bus usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 bus usage
+[Source17]
+Name=GPU1 power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 power
+[Source18]
+Name=GPU1 memory usage
+Units=MB
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage
+[Source19]
+Name=GPU1 memory usage \ process
+Units=MB
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage \ process
+[Source20]
+Name=GPU1 fan tachometer
+Units=RPM
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 fan tachometer
+[Source21]
+Name=GPU1 fan tachometer 2
+Units=RPM
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 fan tachometer 2
+[Source22]
+Name=CPU FAN
+Units=RPM
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=3
+ReadingName=CPU
+[Source23]
+Name=PUMP1 FAN
+Units=RPM
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=3
+ReadingName=PUMP1
+[Source24]
+Name=System 1 FAN
+Units=RPM
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=3
+ReadingName=System 1
+[Source25]
+Name=System 2 FAN
+Units=RPM
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=3
+ReadingName=System 2
+[Source26]
+Name=GPU2 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU2 usage
+[Source27]
+Name=GPU2 video engine usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU2 video engine usage
+[Source28]
+Name=GPU2 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU2 clock
+[Source29]
+Name=PresentMode
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=PresentMode
+[Source30]
+Name=msInputLatency
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msInputLatency
+[Source31]
+Name=msReportingLag
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msReportingLag
+[Source32]
+Name=msInputLatency
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msInputLatency
+[Source33]
+Name=msGpuActive
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msGpuActive
+[Source34]
+Name=IsGpuLimited
+Units=
+Format=
+Formula=(msGpuActive / msBetweenPresents) >= 0.92
+Provider=HAL
+ID=Stub
+[Source35]
+Name=msBetweenPresents
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msBetweenPresents
+[Source36]
+Name=FrameratePresented1Dot0PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenPresents,99)
+Provider=HAL
+ID=Stub
+[Source37]
+Name=FrameratePresented0Dot1PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenPresents,99.9)
+Provider=HAL
+ID=Stub
+[Table0]
+Name=SensorsTable
+UnitsSize=80
+UnitsAlignment=6
+Lines=6
+Line0Name="%CPUShort%    "
+Line0Color=80FF
+Line0Cells=4
+Line0Cell0Source=CPU usage
+Line0Cell0Color=FF8000,0,94,FF0000,95,(CPU usage,0)
+Line0Cell1Source=CPU usage max
+Line0Cell1Color=FF8000,0,90,FF0000,91,(CPU usage max,0)
+Line0Cell2Source=CPU temperature
+Line0Cell3Source=CPU power
+Line1Name=%RAM% RAM
+Line1Color=80FF
+Line1Cells=2
+Line1Cell0Source=RAM usage
+Line1Cell1Source=RAM usage \ process
+Line2Name=%GPU%
+Line2Color=FF00
+Line2Cells=4
+Line2Cell0Source=GPU1 usage
+Line2Cell0Color=FF8000,0,94,FF0000,95,(GPU1 usage,0)
+Line2Cell1Source=GPU1 temperature
+Line2Cell1Color=FF8000,15,80,FF8000,81,(GPU1 temperature,0)
+Line2Cell2Source=GPU1 temperature 2
+Line2Cell2Color=FF8000,15,84,FF0000,85,(GPU1 temperature 2,0)
+Line2Cell3Source=GPU1 power
+Line3Name=%GPU%
+Line3Color=FF00
+Line3Cells=3
+Line3Cell0Source=GPU1 clock
+Line3Cell1Source=GPU1 memory clock
+Line3Cell2Source=GPU1 voltage
+Line4Name=VRAM %VRAM%
+Line4Color=FF00
+Line4Cells=2
+Line4Cell0Source=GPU1 memory usage
+Line4Cell0Color=FF8000,0,10400,FFFF00,10400,11200,FF0000,11200,(GPU1 memory usage,0)
+Line4Cell1Source=GPU1 memory usage \ process
+Line4Cell1Color=FF8000,,10000,FFFF00,1000,11000,FF0000,11000,(GPU1 memory usage \ process,0)
+Line5Name=GPU Fan
+Line5Color=FF00
+Line5Cells=4
+Line5Cell0Source=GPU1 fan speed
+Line5Cell1Source=GPU1 fan tachometer
+Line5Cell2Source=GPU1 fan tachometer 2
+Line5Cell3Text=
+[Table1]
+Name=FPS
+ValueAlignment=0
+UnitsSize=80
+UnitsAlignment=4
+Lines=1
+Line0Name=
+Line0Cells=8
+Line0Cell0Source=Framerate
+Line0Cell1Source=Frametime
+Line0Cell2Source=Framerate Min
+Line0Cell3Source=Framerate Avg
+Line0Cell4Source=Framerate 1% Low
+Line0Cell5Source=Framerate 0.1% Low
+Line0Cell6Source=Framerate history
+Line0Cell7Source=Frametime history
+[Table2]
+Name=FANS
+ValueSize=75
+ValueAlignment=0
+UnitsSize=75
+UnitsAlignment=4
+Lines=4
+Line0Name=CPU FAN
+Line0Cells=1
+Line0Cell0Source=CPU FAN
+Line1Name=PUMP1 FAN
+Line1Cells=1
+Line1Cell0Source=PUMP1 FAN
+Line2Name=SYS1 FAN
+Line2Cells=1
+Line2Cell0Source=System 1 FAN
+Line3Name=SYS2 FAN
+Line3Cells=1
+Line3Cell0Source=System 2 FAN
+[Layer0]
+Name=
+Text=<TT=SensorsTable>
+PositionX=0
+PositionY=0
+ExtentX=-48
+ExtentY=-6
+ExtentOrigin=0
+TextColor=FF8000
+BorderColor=33FF8000
+BorderSize=1
+[Layer1]
+Name=FPS
+Text=Framerate\n<G=Framerate,-24,-2,1,30,400,0> <FR> FPS
+PositionX=0
+PositionY=-7
+ExtentX=-24
+ExtentY=-4
+ExtentOrigin=3
+Size=75
+TextColor=FF8000
+[Layer2]
+Name=
+Text=Frametime\n<G=Frametime,-24,-2,1,2,20,0> <FT> ms
+PositionX=-24
+PositionY=-7
+ExtentX=-24
+ExtentY=-4
+ExtentOrigin=3
+Size=75
+TextColor=FFFF8000
+[Layer3]
+Name=
+Text=FPS Avg  <FRAVG>
+PositionX=-24
+PositionY=-12
+ExtentX=-9
+ExtentY=-1
+ExtentOrigin=0
+Size=80
+TextColor=FFFFFF
+[Layer4]
+Name=
+Text=FPS Min  <FRMIN>
+PositionX=-35
+PositionY=-12
+ExtentX=-9
+ExtentY=-1
+ExtentOrigin=0
+Size=80
+TextColor=FFFFFF
+[Layer5]
+Name=
+Text=FPS 1%   <FR10L>
+PositionX=-24
+PositionY=-13
+ExtentX=-9
+ExtentY=-1
+ExtentOrigin=0
+Size=80
+TextColor=FFFFFF
+[Layer6]
+Name=
+Text=FPS 0.1% <FR01L>
+PositionX=-35
+PositionY=-13
+ExtentX=-9
+ExtentY=-1
+ExtentOrigin=0
+Size=80
+TextColor=FFFFFF
+[Layer7]
+Name=
+Text="<APP> <RES> "
+PositionX=0
+PositionY=-19
+ExtentX=-48
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FFFF8000
+[Layer8]
+Name=FANS
+Text=<TT=FANS>
+PositionX=-24
+PositionY=-14
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=C0C0C0
+[Layer9]
+Name=PresentMode
+VisibilitySource=IsPresentMonDataAvailable
+Text=<SWITCH PresentMode><CASE 0>Hw : legacy flip<CASE 1>Hw : legacy copy<CASE 2>Hw : independent flip<CASE 3>Composed : flip<CASE 4>Hw composed : independent flip<CASE 5>Composed : GPU copy<CASE 6>Composed : CPU copy
+PositionX=0
+PositionY=-17
+ExtentX=-48
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8000
+[Layer10]
+Name=
+Text=%Date% %Time24%
+PositionX=-31
+PositionY=-19
+ExtentX=-17
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFFF8000
+[Layer11]
+Name=PresentMon application latency
+VisibilitySource=IsPresentMonDataAvailable
+Text=App latency %msInputLatency% ms
+PositionX=0
+PositionY=-18
+ExtentX=-24
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FF8000
+RefreshPeriod=500
+[Layer12]
+Name=PresentMon reporting lag
+VisibilitySource=IsPresentMonDataAvailable
+Text=Reporting lag %msReportingLag% ms
+PositionX=-24
+PositionY=-18
+ExtentX=-24
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FF8000
+RefreshPeriod=500
+[Layer13]
+Name=
+VisibilitySource=msBetweenPresents
+Text=Limited by <IF IsGpuLimited><C=00ff00>GPU<C><ELSE><C=0080ff>CPU<C>
+PositionX=-33
+PositionY=-17
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=FF8000
+[Layer14]
+Name=
+Text=1% <G=FrameratePresented1Dot0PLow,-20,-2,1,30,300,0> %FrameratePresented1Dot0PLow% FPS
+PositionX=0
+PositionY=-11
+ExtentX=-24
+ExtentY=-3
+ExtentOrigin=3
+Size=75
+TextColor=FFFF8000
+[Layer15]
+Name=
+Text=0.1%  <G=FrameratePresented0Dot1PLow,-18,-2,1,30,300,0> %FrameratePresented0Dot1PLow% FPS
+PositionX=0
+PositionY=-14
+ExtentX=-24
+ExtentY=-3
+ExtentOrigin=3
+Size=75
+TextColor=FFFF8000
+[Layer16]
+Name=
+Text=RTSS Benchmark Ctrl+num0/1
+PositionX=-24
+PositionY=-11
+ExtentX=-24
+ExtentY=-1
+ExtentOrigin=3
+Size=75
+TextColor=FFFFFF
+[Layer17]
+Name=
+Text=NVENC %GPU1 video engine usage% %
+PositionX=0
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FF00
+[Layer18]
+Name=
+Text=VRAM BUS %GPU1 memory controller usage% %
+PositionX=-12
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FF00
+[Layer19]
+Name=
+Text=PCI-Ex %GPU1 bus usage% %
+PositionX=-28
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=3
+TextColor=FF00
