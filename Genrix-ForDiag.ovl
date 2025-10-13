@@ -16,7 +16,7 @@ Tables=0
 Layers=53
 [Source0]
 Name=CPU temperature
-Units=°C
+Units=Â°C
 Format=
 Formula=
 Provider=HAL
@@ -65,7 +65,7 @@ Provider=HAL
 ID=RAM usage percent
 [Source7]
 Name=GPU1 temperature
-Units=°C
+Units=Â°C
 Format=
 Formula=
 Provider=HAL
@@ -114,7 +114,7 @@ Provider=HAL
 ID=GPU1 total memory
 [Source14]
 Name=GPU1 temperature 2
-Units=°C
+Units=Â°C
 Format=
 Formula=
 Provider=HAL
@@ -937,3 +937,4 @@ ExtentY=-1
 ExtentOrigin=4
 TextColor=FFFFFF
 BgndColor=80C0C0C0
+
