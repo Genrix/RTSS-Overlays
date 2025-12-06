@@ -1,0 +1,108 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-9
+FontWeight=400
+ZoomRatio=2
+[Settings]
+Name=
+EnvVars=
+RefreshPeriod=500
+LockUserSettings=0
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=6
+Tables=0
+Layers=5
+[Source0]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source1]
+Name=CPU usage max
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage max
+[Source2]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source3]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source4]
+Name=GPU1 temperature 2
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature 2
+[Source5]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Layer0]
+Name=
+Text="<TIME=%d-%m-%Y> %Time24% "
+PositionX=0
+PositionY=0
+ExtentX=-25
+ExtentY=-1
+ExtentOrigin=4
+Size=80
+TextColor=FFFFFF
+[Layer1]
+Name=
+Text=<G=Framerate,-20,-2,1,30,300,0> <FR>FPS
+PositionX=0
+PositionY=-3
+ExtentX=-25
+ExtentY=-1
+ExtentOrigin=3
+Size=90
+TextColor=FFFFFF
+[Layer2]
+Name=
+Text=GPU %GPU1 usage% % / %GPU1 temperature% °C / %GPU1 temperature 2% °C
+PositionX=0
+PositionY=-2
+ExtentX=-25
+ExtentY=-1
+ExtentOrigin=3
+FixedAlignment=1
+TextColor=FF00
+[Layer3]
+Name=
+Text=CPU %CPU usage% % / %CPU usage max% % / %CPU temperature% °C
+PositionX=0
+PositionY=-1
+ExtentX=-25
+ExtentY=-1
+ExtentOrigin=3
+TextColor=80FF
+[Layer4]
+Name=
+Text=<G=Frametime,-20,-2,1,1,10,0> <FT>ms
+PositionX=0
+PositionY=-5
+ExtentX=-25
+ExtentY=-1
+ExtentOrigin=3
+Size=90
+TextColor=FFFFFF
